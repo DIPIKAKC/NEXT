@@ -4,3 +4,11 @@ export interface Posts {
     title: string;
     body: string;
 }
+
+export interface EmployeeInterface{
+    id?:string,
+    name:string,
+    position:string,
+    age:number
+
+}
