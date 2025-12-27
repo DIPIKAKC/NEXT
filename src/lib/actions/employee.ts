@@ -12,6 +12,7 @@ export async function addEmployee(employee: EmployeeInterface) {
         revalidatePath('/'); // like we use to use 'invalidateTags' to refresh browser or reset cache in react
         return { success: true, message: 'Employee added successfully' }
     } catch (error) {
+        console.log(error)
         return { success: false, message: error }
     }
 }
