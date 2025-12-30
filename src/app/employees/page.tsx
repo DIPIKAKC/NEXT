@@ -11,6 +11,7 @@ export default async function Page() {
     );
 
     const employees = res.data;
+    console.log(employees)
 
     return (
         <div>
