@@ -31,10 +31,11 @@ export async function updateEmployee(employee: EmployeeInterface, id: string) {
 
 export async function removeEmployee(id: string) {
     try {
-        await axios.post(`https://68c8e3b8ceef5a150f629236.mockapi.io/redux/employees/${id}`);
-        revalidatePath('/'); // like we use to use 'invalidateTags' to refresh browser or reset cache in react
+        await axios.delete(`https://6943678a69b12460f31474d4.mockapi.io/employess/${id}`);
+        console.log('hello');
+        revalidatePath('/');
         return { success: true, message: 'Employee removed successfully' }
-    } catch (error) {
-        return { success: false, message: error }
+    } catch (err: any) {
+        return { success: false, message: err.message }
     }
 }
